@@ -9,9 +9,8 @@
 This repository is created to:
 
 ✅ Track weekly hands-on exercises  
-✅ Maintain structured documentation for each task  
-✅ Help peers understand concepts through organized folders  
-✅ Prepare effectively for placement readiness  
+✅ Maintain structured documentation for each task   
+
 
 Each week's exercise is placed in its respective folder along with necessary documentation, code files, and outputs (if any).
 
