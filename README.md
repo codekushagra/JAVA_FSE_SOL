@@ -1,34 +1,11 @@
-# 🚀 Cognizant Digital Nurture 4.0 - Weekly Hands-on Exercises
+# 🚀 Cognizant Digital Nurture 4.0 - Weekly Hands-on Assignments
 
-📘 A curated repository for tracking and documenting weekly hands-on exercises as part of the **Cognizant Digital Nurture 4.0** training program for on-campus placements.
+Name: Kushagra Chaturvedi
+Superset Id : 6390616
 
 ---
-
-## 📂 About This Repository
-
-This repository is created to:
-
-✅ Track weekly hands-on exercises  
-✅ Maintain structured documentation for each task   
-
 
 Each week's exercise is placed in its respective folder along with necessary documentation, code files, and outputs (if any).
 
 ---
 
-## 📁 Folder Structure
-
-📦 DigitalNurture4.0-Exercises
-┣ 📁 Week1_Exercise
-┃ ┗ 📄 README.md (Details & Code)
-┣ 📁 Week2_Exercise
-┃ ┗ 📄 README.md (Details & Code)
-┗ 📁 ...
-
-## 🛠️ Technologies Used
-
-- 💻 Java / SQL (as per exercise)
-- 📝 Markdown for documentation
-- 📁 Organized folder structure for clarity
-
----
