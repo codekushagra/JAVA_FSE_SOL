@@ -4,7 +4,8 @@
 **Superset ID:** 6390616
 
 
-Each week's exercise is placed in its respective folder along with necessary documentation, code files, and outputs (if any).
+This repository contains the mandatory assignments submitted as part of Cognizant Digital Nurture 4.0 Java FSE program, covering Week 1 to Week 8.
+
 
 ---
 
