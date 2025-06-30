@@ -95,6 +95,3 @@ public class Example {
 
 ---
 
-## License
-
-This project is for educational purposes.
