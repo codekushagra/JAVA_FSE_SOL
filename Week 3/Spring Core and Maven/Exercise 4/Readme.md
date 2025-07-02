@@ -1,71 +1,101 @@
-# Spring Core and Maven – Exercise 4
+# Library Management - Exercise 4
 
-This project is part of the **Spring Core and Maven** learning series.  
-It builds upon the Maven and Spring configuration demonstrated in [Exercise 1](../Exercise%201/Readme.md).
+## Overview
 
----
-
-## Prerequisites
-
-- Java 8 or higher
-- Maven (see [Exercise 1 Maven Configuration](../Exercise%201/Readme.md#maven-configuration))
-- Spring Boot (managed via Maven dependencies)
-
----
-
-## Maven Configuration
-
-For Maven setup and dependency management, **refer to the detailed configuration in [Exercise 1/Library_Management/pom.xml](../Exercise%201/Library_Management/pom.xml)**.  
-This includes:
-- Spring Boot parent and dependencies
-- Build plugins
-- Java version configuration
-
-If you are setting up a new module or project for Exercise 4, you can copy or adapt the `pom.xml` from Exercise 1.
+This project is a simple **Library Management** application built as part of Exercise 4 for learning Spring Core and Maven.  
+It demonstrates basic Spring dependency injection and Maven project setup using **Spring Boot**.
 
 ---
 
 ## Project Structure
 
-Typical structure (adapt as needed for Exercise 4):
+- **`BookService.java`**  
+  A service class that manages book operations using a `BookRepository`.  
+  Dependency injection is handled via a setter method.
 
+  ```java
+  public class BookService {
+      private BookRepository bookRepository;
+
+      // Setter for dependency injection
+      public void setBookRepository(BookRepository bookRepository) {
+          this.bookRepository = bookRepository;
+      }
+
+      public void addBook(String bookName) {
+          bookRepository.saveBook(bookName);
+      }
+  }
+  ```
+
+---
+
+## Exercise 4: Creating and Configuring a Maven Project
+
+### Scenario
+
+You need to set up a new Maven project for the library management application and add Spring dependencies.
+
+### Steps
+
+1. **Create a New Maven Project:**
+   - Create a new Maven project named **Library_Management**.
+
+2. **Add Spring Dependencies in `pom.xml`:**
+   - Include dependencies for:
+     - Spring Context (included via Spring Boot starter)
+     - Spring AOP
+     - Spring WebMVC (included via Spring Boot starter)
+
+3. **Configure Maven Plugins:**
+   - The Maven Compiler Plugin is managed by Spring Boot, but you can set the Java version in the `<properties>` section.
+
+---
+
+## `pom.xml` Dependency Section
+
+Your `pom.xml` should include:
+
+```xml
+<dependencies>
+    <!-- Spring WebMVC and Spring Context (via starter) -->
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-web</artifactId>
+    </dependency>
+
+    <!-- Spring AOP -->
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-aop</artifactId>
+    </dependency>
+
+    <!-- Spring Boot Test (for testing) -->
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-test</artifactId>
+        <scope>test</scope>
+    </dependency>
+</dependencies>
 ```
-Exercise 4/
-├── src/
-│   ├── main/
-│   │   ├── java/
-│   │   └── resources/
-│   └── test/
-├── pom.xml
+
+---
+
+## Java Version
+
+Your `pom.xml` currently uses Java 17:
+```xml
+<properties>
+    <java.version>17</java.version>
+</properties>
 ```
+If you are required to use Java 1.8, change it to:
+```xml
+<properties>
+    <java.version>1.8</java.version>
+</properties>
+```
+and ensure your JDK matches.
 
 ---
 
-## How to Build and Run
-
-1. **Build the project:**
-   ```sh
-   mvn clean install
-   ```
-
-2. **Run the application:**
-   ```sh
-   mvn spring-boot:run
-   ```
-   Or run the main class directly from your IDE.
-
----
-
-## Notes
-
-- For any Spring or Maven configuration, refer to the [Exercise 1 README](../Exercise%201/Readme.md) and its `pom.xml`.
-- Ensure your dependencies and plugins match those in Exercise 1 for consistency.
-- If you have specific requirements or differences for Exercise 4, update this README accordingly.
-
----
-
-## References
-
-- [Exercise 1 README](../Exercise%201/Readme.md)
-- [Spring Boot Documentation](https://docs.spring.io/spring-boot/docs/current/reference/html/)
-- [Maven Documentation](https://maven.apache.org/guides/index.html)
