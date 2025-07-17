@@ -15,7 +15,7 @@ bank-microservices/
 │   ├── src/
 │   ├── pom.xml
 │
-├── screenshots/                # Screenshots of endpoint testing (optional)
+ # Screenshots of endpoint testing (optional)
 │   ├── account_endpoint_test.png
 │   └── loan_endpoint_test.png
 │
