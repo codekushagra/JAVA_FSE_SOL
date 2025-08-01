@@ -1,0 +1,32 @@
+button {
+  margin: 5px;
+  padding: 3px 8px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.heading {
+  color: green;
+  font-weight: bold;
+}
+.heading {
+  color: green;
+  font-weight: bold;
+}
+
+.form {
+  margin-top: 10px;
+}
+
+.form label {
+  display: inline-block;
+  width: 80px;
+  text-align: right;
+  margin-right: 10px;
+}
+
+.form input,
+.form select {
+  padding: 3px;
+  margin-bottom: 10px;
+}
